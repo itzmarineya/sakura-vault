@@ -1,0 +1,9 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+# Do not cache the main app while you are iterating on the VM.
+[[headers]]
+  for = "/Corrupt Sakura Vault v1.2.html"
+  [headers.values]
+    Cache-Control = "no-cache"
