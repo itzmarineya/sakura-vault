@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Opening Corrupt Sakura Vault…</title>
+  <style>
+    html,body{height:100%;margin:0;background:#0d0915;color:#fff;font-family:system-ui,-apple-system,Segoe UI,sans-serif}
+    body{display:grid;place-items:center;background:radial-gradient(circle at 50% 20%,#44204d 0,transparent 38%),#0d0915}
+    main{text-align:center;padding:32px}.flower{font-size:52px;animation:bob 1.7s ease-in-out infinite alternate}@keyframes bob{to{transform:translateY(-10px) rotate(8deg)}}
+    h1{font-size:21px;margin:18px 0 7px}.sub{color:#d9b6d2;font-size:14px}.fallback{display:none;margin-top:20px;padding:11px 15px;border-radius:10px;color:#fff;background:#f472b6;border:0;font-weight:800;cursor:pointer}
+  </style>
+</head>
+<body><main><div class="flower">🌸</div><h1>Opening Corrupt Sakura Vault…</h1><p class="sub">Connecting your Vault and VM loader.</p><button class="fallback" id="fallback">Open Vault</button></main>
+<script>
+(async()=>{
+  const files=['CorruptSakuraVault.html','corruptsakuravault.html','CorruptSakuraVault','corruptsakuravault','Corrupt%20Sakura%20Vault%20v1.2.html','corrupt%20sakura%20vault%20v1.2'];
+  for(const file of files){
+    try{const r=await fetch('./'+file,{method:'HEAD',cache:'no-store'});if(r.ok){location.replace('./'+file);return;}}catch(e){}
+  }
+  document.querySelector('.sub').textContent='Upload your CorruptSakuraVault.html file, then refresh this page.';
+  const b=document.getElementById('fallback');b.style.display='inline-block';b.onclick=()=>location.href='./CorruptSakuraVault.html';
+})();
+</script></body></html>
